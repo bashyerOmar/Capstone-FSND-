@@ -24,6 +24,11 @@ def create_app(test_config=None):
         return response
 
     # ROUTES
+
+    @app.route('/')
+    def index():
+       return 'Final Project "Casting Agency" '
+
     #################################################### Actor Endpoints #############################
     # get all actors, permision here for (Assistant , Director and producer)
     @app.route('/actors')
