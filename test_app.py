@@ -31,17 +31,16 @@ class CastiongAgencyTestCase(unittest.TestCase):
         # self.DB_USER = os.getenv('DB_USER', 'postgres')  
         # self.DB_PASSWORD = os.getenv('DB_PASSWORD', 'zeronyuuki23')  
         # self.DB_NAME = os.getenv('DB_NAME', 'capstone')  
-        # self.DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(self.DB_USER, self.DB_PASSWORD, self.DB_HOST, self.DB_NAME)
+        # self.database_path = 'postgresql+psycopg2://{}:{}@{}/{}'.format(self.DB_USER, self.DB_PASSWORD, self.DB_HOST, self.DB_NAME)
         setup_db(self.app, self.database_path)
         
 
         # binds the app to the current context
         with self.app.app_context():
-            self.db = SQLAlchemy()
-            self.db.init_app(self.app)
-            # create all tables
-            #self.db.create_all()
-    
+             self.db = SQLAlchemy()
+             self.db.init_app(self.app)
+            
+           
     def tearDown(self):
         """Executed after reach test"""
         pass
