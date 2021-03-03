@@ -4,20 +4,20 @@ import json
 from flask_migrate import Migrate
 import os
 
-DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')  
-DB_USER = os.getenv('DB_USER', 'postgres')  
-DB_PASSWORD = os.getenv('DB_PASSWORD', 'zeronyuuki23')  
-DB_NAME = os.getenv('DB_NAME', 'capstone')  
-DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
+# DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')  
+# DB_USER = os.getenv('DB_USER', 'postgres')  
+# DB_PASSWORD = os.getenv('DB_PASSWORD', 'zeronyuuki23')  
+# DB_NAME = os.getenv('DB_NAME', 'capstone')  
+# DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
 #database_path = os.environ['DATABASE_URL'] # from heroku
-#database_path='postgres://mlnhpfokafocff:74258cc1c6f3360465495eae157fa1ff78875a003a772bbf27ee051a87aef798@ec2-3-214-3-162.compute-1.amazonaws.com:5432/d2k8k2756eot74'
+self.database_path='postgres://jredwjddmefdux:793ae2f82281dc23f7ea165ff44f16cab5fbdf28c3f73fdc9c9351c3eaeaaf13@ec2-54-164-241-193.compute-1.amazonaws.com:5432/d6tjrcq4k614fq'
 db = SQLAlchemy()
 
 '''
 setup_db(app)
     binds a flask application and a SQLAlchemy service
 '''
-def setup_db(app, database_path=DB_PATH):
+def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app

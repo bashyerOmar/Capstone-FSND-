@@ -26,12 +26,13 @@ class CastiongAgencyTestCase(unittest.TestCase):
         self.app = create_app()
         self.client = self.app.test_client 
         #self.database_path = os.environ['DATABASE_URL']
-        self.DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')  
-        self.DB_USER = os.getenv('DB_USER', 'postgres')  
-        self.DB_PASSWORD = os.getenv('DB_PASSWORD', 'zeronyuuki23')  
-        self.DB_NAME = os.getenv('DB_NAME', 'capstone')  
-        self.DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(self.DB_USER, self.DB_PASSWORD, self.DB_HOST, self.DB_NAME)
-        setup_db(self.app, self.DB_PATH)
+        self.database_path='postgres://jredwjddmefdux:793ae2f82281dc23f7ea165ff44f16cab5fbdf28c3f73fdc9c9351c3eaeaaf13@ec2-54-164-241-193.compute-1.amazonaws.com:5432/d6tjrcq4k614fq'
+        # self.DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')  
+        # self.DB_USER = os.getenv('DB_USER', 'postgres')  
+        # self.DB_PASSWORD = os.getenv('DB_PASSWORD', 'zeronyuuki23')  
+        # self.DB_NAME = os.getenv('DB_NAME', 'capstone')  
+        # self.DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(self.DB_USER, self.DB_PASSWORD, self.DB_HOST, self.DB_NAME)
+        setup_db(self.app, self.database_path)
         
 
         # binds the app to the current context
