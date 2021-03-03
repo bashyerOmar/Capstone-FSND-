@@ -10,7 +10,7 @@ import os
 # DB_NAME = os.getenv('DB_NAME', 'capstone')  
 # DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
 #database_path = os.environ['DATABASE_URL'] # from heroku
-self.database_path='postgres://jredwjddmefdux:793ae2f82281dc23f7ea165ff44f16cab5fbdf28c3f73fdc9c9351c3eaeaaf13@ec2-54-164-241-193.compute-1.amazonaws.com:5432/d6tjrcq4k614fq'
+database_path='postgres://jredwjddmefdux:793ae2f82281dc23f7ea165ff44f16cab5fbdf28c3f73fdc9c9351c3eaeaaf13@ec2-54-164-241-193.compute-1.amazonaws.com:5432/d6tjrcq4k614fq'
 db = SQLAlchemy()
 
 '''
