@@ -1,8 +1,8 @@
-####Capstone Final Project (Casting Agency )
+# Capstone Final Project (Casting Agency )
 
 
 
-#### PIP Dependencies
+## PIP Dependencies
 
 Once you have your virtual environment setup and running, install dependencies by open your terminal and run:
 
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 This will install all of the required packages within the `requirements.txt` file.
 
 
-#### Running the server
+## Running the server
 
 To run the server, execute:
 
@@ -32,12 +32,12 @@ Setting the `FLASK_APP` variable to `app` directs flask to use the `app` file to
 
 
 
-####Getting Started
+## Getting Started
 Base URL: this application hosted on https://capstone-fsnd-bshayer.herokuapp.com/ 
 Authentication: This application require authentication for all endpoints except index endpoint.
 
 
-####Error Handling
+## Error Handling
 Errors are returned as JSON objects in the following format:
 ```
 {
@@ -57,9 +57,9 @@ The API will return seven error types when requests fail:
 500: Server error
 
 
-#### API Endpoints
+## API Endpoints
 
-##GET '/movies'
+#### GET '/movies'
 General:
 - Fetches all movies from database  
 - require authntication 
@@ -83,7 +83,7 @@ General:
 }
 ```
 
-##GET '/actors'
+#### GET '/actors'
 General:
 - Fetches all actors from database  
 - require authntication 
@@ -109,7 +109,7 @@ General:
 }
 ```
 
-##POST '/add-movie'
+#### POST '/add-movie'
 General:
 - insert (post) new movies to database  
 - require authntication 
@@ -125,7 +125,7 @@ General:
 }
 ```
 
-##POST '/add-actor'
+#### POST '/add-actor'
 General:
 - insert (post) new actors to database  
 - require authntication 
@@ -142,7 +142,7 @@ General:
 }
 ```
 
-##PATCH 'movies/1'
+#### PATCH 'movies/1'
 General:
 - modify movie data based on id (id=1)
 - require authntication 
@@ -159,7 +159,7 @@ General:
 ```
 
 
-##PATCH 'actors/1'
+#### PATCH 'actors/1'
 General:
 - modify actor data based on id (id=1)
 - require authntication 
@@ -177,7 +177,7 @@ General:
 ```
 
 
-##DELETE 'movies/1'
+#### DELETE 'movies/1'
 General:
 - remove movie with id=1 from database 
 - require authntication 
@@ -189,7 +189,7 @@ General:
 }
 ```
 
-##DELETE 'actors/1'
+#### DELETE 'actors/1'
 General:
 - remove actor with id=1 from database 
 - require authntication 
